@@ -1,0 +1,26 @@
+#SpringMVC
+
+jsp响应流程
+
+请求 -->DispatchServlet
+-->HandlerMapping
+-->Controller
+--->返回MV
+--->jsp响应
+
+#json响应流程
+
+请求 -->DispatchServlet
+-->HandlerMapping
+-->Controller
+-->返回数据对象(string/user/list/map)
+-->JSON响应
+
+- 导包 jackson
+- 配置注解驱动;
+- Controller 方法上加@ResponseBody 
+
+如果我们想要把user对象 以json对象格式返回的话 要加上@ResponseBody
+
+要测试下效果 则浏览器端发出请求，通过requestMapping进行匹配  路径的匹配
+给map里面添加数据 用put
