@@ -1,5 +1,5 @@
 
-//获得coolie 的值
+//获得cookie 的值
 
 function cookie(name){    
 
@@ -67,7 +67,7 @@ function addCookie(objName,objValue,objHours){      //添加cookie
 
  
 
-function SetCookie(name,value)//两个参数，一个是cookie的名子，一个是值
+function SetCookie(name,value)//两个参数，一个是cookie的名字，一个是值
 
 {
 

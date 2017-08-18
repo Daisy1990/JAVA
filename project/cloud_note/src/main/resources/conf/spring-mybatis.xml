@@ -37,7 +37,7 @@
 	</bean>
 	<!-- 配置mapper扫描 -->
 	<bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.midea.dao"></property>
+		<property name="basePackage" value="com.midea.cloud_note.dao"></property>
 	</bean>
 	
 	

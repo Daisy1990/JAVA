@@ -11,9 +11,17 @@
 </script>
 <script type="text/javascript" src="scripts/basevalue.js">
 </script>
-<script type="text/javascript" src="scripts/login.js">
+<!--  <script type="text/javascript" src="scripts/login.js">
+</script>-->
+<script type="text/javascript" src="scripts/userLogin.js">
 </script>
 <script type="text/javascript" src="scripts/regist.js">
+</script>
+<script type="text/javascript">
+	//主处理方法
+	$(function(){//加载完body后调用该函数
+		$("#login").click(userLogin);
+	});
 </script>
 <link rel="stylesheet" href="styles/login.css"/>
 </head>

@@ -1,0 +1,66 @@
+项目简介
+云笔记
+
+CMMI 软件成熟度模型
+IOC
+AOP
+
+SSM框架
+SpringMVC + spring + Mybatis
+commons-dbcp
+高访问量的时候 可以控制访问数量 限制
+低访问量的时候  连接池可以重用数据库连接，提高访问效率
+
+创建云笔记项目环境
+导包
+添加配置文件
+--conf/spring-mvc.xml
+--conf/spring-mybatis.xml
+--mapper/SQL文件
+--web.xml
+
+划分包结构
+--com.midea.cloud_note.dao
+--com.midea.cloud_note.service
+--com.midea.cloud_note.controller
+--com.midea.cloud_note.entity
+--com.midea.cloud_note.util
+
+处理html:将html目录下的内容拷贝到webapp下
+
+登陆功能
+发送ajax请求
+1.事件绑定
+-获取参数信息 发送给服务器的信息
+--$.ajax发送请求
+
+服务器端处理
+
+请求 --》DispatcherServlet--->HandlerMapping-->Controller.execute()(用到json 以json的格式返回给浏览器)
+-->Service-->Dao 访问数据库服务器-->cn_user表 -->返回数据（json）
+
+ajax回调处理
+--成功：edit.html
+-失败：提示信息，重新登陆
+jackSon
+--解析json数据
+--显示返回的结果数据
+
+MD5：摘要算法，加密处理
+--最初用于文本比较
+--将任意长度的字节处理成等长的结果
+--不可逆
+
+Base64
+将自己转换成字符串输出
+构成：
+-(a-z A-Z)
+-(0-9)
+-(+ =)
+update cn_user set cn_user_password='f2/6prsLQIAXtiJUIRaRtQ==';
+
+测试请求路径
+http://localhost:8080/cloud_note/user/login.do?name=Andy&password=123456
+
+
+
