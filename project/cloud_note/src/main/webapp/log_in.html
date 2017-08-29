@@ -15,13 +15,19 @@
 </script>-->
 <script type="text/javascript" src="scripts/userLogin.js">
 </script>
-<script type="text/javascript" src="scripts/regist.js">
+<script type="text/javascript" src="scripts/userRegist.js">
 </script>
+<!--  <script type="text/javascript" src="scripts/regist.js">
+</script>-->
 <script type="text/javascript">
 	//主处理方法
 	$(function(){//加载完body后调用该函数
+		//登陆功能事件绑定
 		$("#login").click(userLogin);
+		//注册功能的事件绑定
+		$("#regist_button").click(userRegist);
 	});
+	
 </script>
 <link rel="stylesheet" href="styles/login.css"/>
 </head>

@@ -5,9 +5,15 @@ import java.util.UUID;
 import org.apache.tomcat.util.codec.binary.Base64;
 
 public class NoteUtil {
+	/*
+	 * 利用UUID算法生成主键
+	 * */
 	public static String createId(){
+		
 		UUID uuid = UUID.randomUUID();
-		return uuid.toString();
+		String id = uuid.toString();
+		return id.replace("-", "");
+		//return uuid.toString();
 	}
 	
 	public static String createToken(){
@@ -31,9 +37,12 @@ public class NoteUtil {
 		
 	}
 	
-//	public static void main(String[] args){
-//		System.out.println(md5("112"));
-//		System.out.println(md5("112"));
-//	}
+	public static void main(String[] args){
+		//System.out.println(md5("112"));
+		//System.out.println(md5("112"));
+		//测试生成主键
+		System.out.println(createId());
+		System.out.println(md5(createId()));
+	}
 	
 }

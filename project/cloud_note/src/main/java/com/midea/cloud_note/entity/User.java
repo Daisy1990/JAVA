@@ -45,6 +45,8 @@ public class User implements Serializable{
 	public void setCn_user_nick(String cn_user_nick) {
 		this.cn_user_nick = cn_user_nick;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "user_id="+cn_user_id+",user_name="+cn_user_name;

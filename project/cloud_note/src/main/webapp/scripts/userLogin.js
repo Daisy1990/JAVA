@@ -30,10 +30,10 @@ function userLogin(){
 					//登陆成功，将用户信息保存到cookie中
 					
 					//将身份信息写入Cookie
-			 	    //var token = result.data.userToken;
+			 	    var token = result.data.userToken;
 			 	    var userId= result.data.cn_user_id;
 			 	    //(加密)写入Cookie
-			 	    //addCookie("userToken",token,2);
+			 	    addCookie("userToken",token,2);
 			 	    addCookie("userId",userId,2);
 					window.location.href="edit.html";
 				}else if(result.status == 1){

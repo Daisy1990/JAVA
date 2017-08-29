@@ -8,4 +8,20 @@
 			select * from cn_user 
 					where cn_user_name = #{name}
 		</select>
+		
+		<insert id="save"
+		parameterType="com.midea.cloud_note.entity.User">
+		insert into cn_user (
+		cn_user_id,
+		cn_user_name,
+		cn_user_pwd,
+		cn_user_nick,
+		cn_user_token) 
+		values (
+		#{cn_user_id},
+		#{cn_user_name},
+		#{cn_user_pwd},
+		#{cn_user_nick},
+		#{cn_user_token});
+		</insert>
 </mapper>

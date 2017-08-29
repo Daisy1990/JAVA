@@ -14,8 +14,26 @@ public class TestUserDao {
 		UserDao dao = ctx.getBean("userDao",UserDao.class);
 		User user = dao.findByName("Andy");
 		System.out.println(user);
+	}
+	
+	@Test
+	public void testSave(){
+		String[] conf 
+		={"conf/spring-mybatis.xml","conf/spring-mvc.xml"};
+		ApplicationContext ctx = new ClassPathXmlApplicationContext(conf);
+		UserDao dao = ctx.getBean("userDao",UserDao.class);
+		User usr01 = new User();
+		usr01.setCn_user_id("082203");
+		usr01.setCn_user_name("test05");
+		usr01.setCn_user_nick("testnick");
+		usr01.setCn_user_pwd("098798");
+		usr01.setCn_user_token(null);
+		dao.save(usr01);
+		User user = dao.findByName("test05");
+		System.out.println(user);
 		
 	}
+	
 	
 	
 }
